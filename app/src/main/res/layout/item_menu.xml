@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <TextView
+        android:id="@+id/menu_title"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="연어초밥 12p"
+        android:textColor="#242c36"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/menu_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12,000"
+        android:textSize="16dp"
+        android:textColor="#242c36"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/menu_title"
+        app:layout_constraintTop_toBottomOf="@id/menu_title"/>
+    <TextView
+        android:id="@+id/won"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="원"
+        android:textSize="16dp"
+        android:textColor="#242c36"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@id/menu_price"
+        app:layout_constraintTop_toBottomOf="@id/menu_title"/>
+
+    <TextView
+        android:id="@+id/menu_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="연어2, 활어2, 참치2, 찐새우2, 계란2"
+        android:textColor="#969dad"
+        android:textSize="12dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@id/menu_price"
+        app:layout_constraintTop_toBottomOf="@id/menu_price"/>
+
+    <ImageView
+        android:id="@+id/menu_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/menu_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="16dp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e6e6e9"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="22dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/menu_img"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
