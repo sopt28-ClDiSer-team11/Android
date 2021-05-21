@@ -80,6 +80,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/card_img"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
@@ -237,6 +238,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
             android:src="@drawable/category_picking"
+            app:layout_constraintEnd_toEndOf="@+id/arrow_forward"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/select_restaurant_title" />
 

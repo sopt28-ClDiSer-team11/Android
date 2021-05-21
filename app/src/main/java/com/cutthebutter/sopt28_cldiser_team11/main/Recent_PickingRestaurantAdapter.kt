@@ -1,11 +1,13 @@
 package com.cutthebutter.sopt28_cldiser_team11.main
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.cutthebutter.sopt28_cldiser_team11.R
 import com.cutthebutter.sopt28_cldiser_team11.databinding.ItemRecentPickingRestaurantBinding
+import com.cutthebutter.sopt28_cldiser_team11.inner.InnerActivity
 
 class Recent_PickingRestaurantAdapter : RecyclerView.Adapter<Recent_PickingRestaurantAdapter.Recent_PickingRestaurantViewHolder>(){
     val RecentpickingRestaurantDatas = mutableListOf<Recent_PickingRestaurantData>()
@@ -40,6 +42,11 @@ class Recent_PickingRestaurantAdapter : RecyclerView.Adapter<Recent_PickingResta
             binding.starScore.text = Recent_pickingRestaurantData.star_score
             binding.gradeScore.text = Recent_pickingRestaurantData.grade_score
             binding.recentDistance.text = Recent_pickingRestaurantData.recent_distance
+
+            itemView.setOnClickListener {view ->
+                val intent = Intent(view.context, InnerActivity::class.java)
+                view.context.startActivity(intent)
+            }
         }
     }
 }

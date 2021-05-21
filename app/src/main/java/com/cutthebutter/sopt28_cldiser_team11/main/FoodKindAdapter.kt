@@ -1,5 +1,6 @@
 package com.cutthebutter.sopt28_cldiser_team11.main
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -7,6 +8,7 @@ import com.bumptech.glide.Glide
 import com.cutthebutter.sopt28_cldiser_team11.R
 import com.cutthebutter.sopt28_cldiser_team11.databinding.ItemFoodKindBinding
 import com.cutthebutter.sopt28_cldiser_team11.databinding.ItemPickingRestaurantBinding
+import com.cutthebutter.sopt28_cldiser_team11.inner.InnerActivity
 
 class FoodKindAdapter : RecyclerView.Adapter<FoodKindAdapter.FoodKindViewHolder>() {
     val foodKindDatas = mutableListOf<FoodKindData>()
@@ -38,6 +40,7 @@ class FoodKindAdapter : RecyclerView.Adapter<FoodKindAdapter.FoodKindViewHolder>
         fun onBind(foodKindData: FoodKindData) {
             binding.foodKindTitle.text = foodKindData.foodName
             Glide.with(itemView).load(foodKindData.foodImage).placeholder(R.drawable.category_img_1).into(binding.foodImage)
+
         }
     }
 }
