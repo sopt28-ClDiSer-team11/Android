@@ -14,6 +14,7 @@ class InnerActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val menuFragment = MenuFragment()
+
         val transaction = supportFragmentManager.beginTransaction()
         transaction.add(R.id.menu_frag, menuFragment)
         transaction.commit()
