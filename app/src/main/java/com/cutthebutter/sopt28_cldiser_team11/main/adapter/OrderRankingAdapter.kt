@@ -1,4 +1,4 @@
-package com.cutthebutter.sopt28_cldiser_team11.main
+package com.cutthebutter.sopt28_cldiser_team11.main.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.cutthebutter.sopt28_cldiser_team11.R
 import com.cutthebutter.sopt28_cldiser_team11.databinding.ItemOrderRankingBinding
+import com.cutthebutter.sopt28_cldiser_team11.main.OrderRankingData
 
 class OrderRankingAdapter: RecyclerView.Adapter<OrderRankingAdapter.OrderRankingViewHolder>() {
 
@@ -34,7 +35,8 @@ class OrderRankingAdapter: RecyclerView.Adapter<OrderRankingAdapter.OrderRanking
         private val binding: ItemOrderRankingBinding
     ) : RecyclerView.ViewHolder(binding.root){
         fun onBind(orderRankingData: OrderRankingData){
-            Glide.with(itemView).load(orderRankingData.ranking_img).placeholder(R.drawable.ranking_img_1).into(binding.rankingImg)
+            Glide.with(itemView)
+                .load(orderRankingData.ranking_img).placeholder(R.drawable.ranking_img_1).into(binding.rankingImg)
             binding.rankingTitle.text = orderRankingData.ranking_title
             binding.starPoint.text = orderRankingData.star_point
             binding.gradeAmount.text = orderRankingData.grade_amount

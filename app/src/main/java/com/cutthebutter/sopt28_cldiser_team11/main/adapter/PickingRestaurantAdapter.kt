@@ -1,4 +1,4 @@
-package com.cutthebutter.sopt28_cldiser_team11.main
+package com.cutthebutter.sopt28_cldiser_team11.main.adapter
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import com.bumptech.glide.Glide
 import com.cutthebutter.sopt28_cldiser_team11.R
 import com.cutthebutter.sopt28_cldiser_team11.databinding.ItemPickingRestaurantBinding
 import com.cutthebutter.sopt28_cldiser_team11.inner.InnerActivity
+import com.cutthebutter.sopt28_cldiser_team11.main.PickingRestaurantData
 
 class PickingRestaurantAdapter :
     RecyclerView.Adapter<PickingRestaurantAdapter.PickingRestaurantViewHolder>() {

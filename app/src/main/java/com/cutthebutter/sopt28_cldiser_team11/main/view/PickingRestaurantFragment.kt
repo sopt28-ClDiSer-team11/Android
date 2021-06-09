@@ -1,4 +1,4 @@
-package com.cutthebutter.sopt28_cldiser_team11.main
+package com.cutthebutter.sopt28_cldiser_team11.main.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.cutthebutter.sopt28_cldiser_team11.R
 import com.cutthebutter.sopt28_cldiser_team11.databinding.FragmentPickingRestaurantBinding
+import com.cutthebutter.sopt28_cldiser_team11.main.adapter.PickingRestaurantAdapter
+import com.cutthebutter.sopt28_cldiser_team11.main.PickingRestaurantData
 
 class PickingRestaurantFragment : Fragment() {
 
