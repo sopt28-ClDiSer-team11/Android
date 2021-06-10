@@ -25,7 +25,10 @@ class OrderRankingAdapter: RecyclerView.Adapter<OrderRankingAdapter.OrderRanking
 
     override fun getItemCount(): Int = orderRankingList.size
 
-    override fun onBindViewHolder(holder: OrderRankingViewHolder, position: Int) {
+    override fun onBindViewHolder(
+        holder: OrderRankingViewHolder,
+        position: Int
+    ) {
         holder.onBind(orderRankingList[position])
     }
 

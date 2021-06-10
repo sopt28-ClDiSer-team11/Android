@@ -12,7 +12,7 @@ class MenuAdapter: RecyclerView.Adapter<MenuAdapter.MenuViewHolder>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): MenuAdapter.MenuViewHolder {
+    ): MenuViewHolder {
         val binding = ItemMenuBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,

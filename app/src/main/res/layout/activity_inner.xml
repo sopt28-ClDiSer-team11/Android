@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
+<androidx.core.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".inner.InnerActivity">
+    tools:context=".inner.InnerActivity"
+    android:id="@+id/scrollView">
 
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
@@ -498,15 +499,19 @@
         android:layout_marginStart="16dp" />
 
 
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/menu_frag"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_main_menu"/>
+        app:layout_constraintTop_toBottomOf="@+id/text_main_menu"
+        />
+
+
 
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+</androidx.core.widget.NestedScrollView>
