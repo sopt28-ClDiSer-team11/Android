@@ -4,7 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".main.MainActivity"
+    tools:context=".main.view.MainActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
@@ -135,7 +135,6 @@
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/recent_picking_frag"
-            android:name="com.cutthebutter.sopt28_cldiser_team11.main.Recent_PickingRestaurantFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
