@@ -3,11 +3,14 @@ package com.cutthebutter.sopt28_cldiser_team11.inner
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.cutthebutter.sopt28_cldiser_team11.R
 import com.cutthebutter.sopt28_cldiser_team11.databinding.ItemMenuBinding
+import com.cutthebutter.sopt28_cldiser_team11.inner.model.ResponseMenu
 
 
 class MenuAdapter: RecyclerView.Adapter<MenuAdapter.MenuViewHolder>() {
-    val menuList = mutableListOf<MenuData>()
+    val menuList = mutableListOf<ResponseMenu.Data>()
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -23,7 +26,10 @@ class MenuAdapter: RecyclerView.Adapter<MenuAdapter.MenuViewHolder>() {
 
     override fun getItemCount(): Int = menuList.size
 
-    override fun onBindViewHolder(holder: MenuAdapter.MenuViewHolder, position: Int) {
+    override fun onBindViewHolder(
+        holder: MenuViewHolder,
+        position: Int
+    ) {
         holder.onBind(menuList[position])
     }
 
@@ -31,10 +37,12 @@ class MenuAdapter: RecyclerView.Adapter<MenuAdapter.MenuViewHolder>() {
     class MenuViewHolder(
         private val binding: ItemMenuBinding
     ) : RecyclerView.ViewHolder(binding.root){
-        fun onBind(menuData: MenuData){
-            binding.menuTitle.text = menuData.menu_title
-            binding.menuPrice.text = menuData.menu_price
-            binding.menuDetail.text = menuData.menu_detail
+        fun onBind(menuData: ResponseMenu.Data){
+            Glide.with(itemView)
+                .load(menuData.image).placeholder(R.drawable.menu_image).into(binding.menuImg)
+            binding.menuTitle.text = menuData.title
+            binding.menuPrice.text = menuData.price
+            binding.menuDetail.text = menuData.detailMenu
         }
     }
 }

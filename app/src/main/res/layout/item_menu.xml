@@ -27,20 +27,11 @@
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="@id/menu_title"
         app:layout_constraintTop_toBottomOf="@id/menu_title"/>
-    <TextView
-        android:id="@+id/won"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="원"
-        android:textSize="16dp"
-        android:textColor="#242c36"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toEndOf="@id/menu_price"
-        app:layout_constraintTop_toBottomOf="@id/menu_title"/>
+
 
     <TextView
         android:id="@+id/menu_detail"
-        android:layout_width="wrap_content"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:text="연어2, 활어2, 참치2, 찐새우2, 계란2"
         android:textColor="#969dad"
