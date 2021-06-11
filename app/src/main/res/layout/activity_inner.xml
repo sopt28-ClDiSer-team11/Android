@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
+<androidx.core.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".inner.InnerActivity">
+    tools:context=".inner.InnerActivity"
+    android:id="@+id/scrollView">
 
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
@@ -121,14 +122,38 @@
                 app:layout_constraintBottom_toBottomOf="parent"/>
 
             <TextView
+                android:id="@+id/text_review"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="리뷰 500개"
+                android:text="리뷰"
                 android:textSize="12dp"
                 android:textColor="#62afe3"
                 android:textStyle="bold"
                 android:layout_marginLeft="4dp"
                 app:layout_constraintStart_toEndOf="@+id/restaurant_main_point"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/restaurant_review_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="500"
+                android:textSize="12dp"
+                android:textColor="#62afe3"
+                android:textStyle="bold"
+                android:layout_marginLeft="2dp"
+                app:layout_constraintStart_toEndOf="@+id/text_review"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="개"
+                android:textSize="12dp"
+                android:textColor="#62afe3"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/restaurant_review_count"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"/>
 
@@ -227,18 +252,13 @@
             android:id="@+id/time_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="240dp"
-            android:layout_marginBottom="50dp"
+            android:layout_marginStart="9dp"
             android:text="19분~29분"
             android:textColor="#e87035"
             android:textSize="12dp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toEndOf="@+id/cheeta_image"
+            app:layout_constraintTop_toTopOf="@+id/cheeta_image" />
 
         <ImageView
             android:id="@+id/cheeta_image"
@@ -339,65 +359,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+
+        <TextView
             android:id="@+id/notice_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="14dp"
-            android:layout_marginTop="13dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="15dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:text="좋은 재료를 엄선해서 저렴하게 초밥을 판매하고 있는 여우골초밥입니다. 따뜻하고 부드러운 여우골 초밥 꼭 드셔보세요."
+            android:textColor="#242c36"
+            android:textSize="12dp"
+            android:layout_marginLeft="12dp"
             app:layout_constraintStart_toEndOf="@+id/notice"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0">
+            app:layout_constraintTop_toTopOf="@+id/notice" />
 
-            <TextView
-                android:id="@+id/notice_text_3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="따뜻하고 부드러운 여우골 초밥 꼭 드셔보세요."
-                android:textColor="#242c36"
-                android:textSize="12dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
-
-            <TextView
-                android:id="@+id/notice_text_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="35dp"
-                android:text="좋은 재료를 엄선해서 저렴하게 초밥을 판매하고 있"
-                android:textColor="#242c36"
-                android:textSize="12dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.666" />
-
-            <TextView
-                android:id="@+id/notice_text_2"
-                android:layout_width="110dp"
-                android:layout_height="20dp"
-                android:layout_marginBottom="13dp"
-                android:text="는 여우골초밥입니다."
-                android:textColor="#242c36"
-                android:textSize="12dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.947" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -498,15 +471,19 @@
         android:layout_marginStart="16dp" />
 
 
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/menu_frag"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_main_menu"/>
+        app:layout_constraintTop_toBottomOf="@+id/text_main_menu"
+        />
+
+
 
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+</androidx.core.widget.NestedScrollView>
